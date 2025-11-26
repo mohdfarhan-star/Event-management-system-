@@ -4,10 +4,6 @@ const database = require('./config/database');
 const dotenv = require('dotenv');
 const cookieParser = require("cookie-parser");
 const cors = require('cors');
-const fileUpload = require("express-fileupload");
-const {cloudinaryConnect} = require('./config/cloudinary')
-const candidateRoutes = require("./routes/candidateRoutes")
-const authRoutes = require("./routes/authRoutes")
 const userRoutes = require("./routes/userRoutes")
 const eventRoutes = require("./routes/eventRoutes")
 
@@ -29,15 +25,6 @@ app.use(
 		credentials: true,
 	})
 );
-app.use(
-	fileUpload({
-		useTempFiles: true,
-		tempFileDir: "/tmp/",
-	})
-);
-
-//cloudinary connect
-cloudinaryConnect();
 
 app.use("/api/v1/users", userRoutes);
 app.use("/api/v1/events", eventRoutes);

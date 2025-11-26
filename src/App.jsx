@@ -4,7 +4,7 @@ import moment from 'moment-timezone'
 import { Calendar, Clock, Users, Plus, X, Edit, Eye, ChevronDown } from 'lucide-react'
 import './App.css'
 
-const API_BASE_URL = 'https://event-management-system-backend-bfnm.onrender.com/api/v1'
+const API_BASE_URL = 'https://event-management-system-4l25.onrender.com/api/v1'
 
 // Timezone options
 const TIMEZONES = [

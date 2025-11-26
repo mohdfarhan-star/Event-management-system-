@@ -19,7 +19,7 @@ database.connect();
 app.use(express.json());
 app.use(
 	cors({
-		origin: ["https://portfolio-pvx3.vercel.app", "http://localhost:5173", "http://localhost:3000"],
+		origin: ["https://portfolio-dkg3.vercel.app", "http://localhost:5173", "http://localhost:3000"],
 		credentials: true,
 	})
 );

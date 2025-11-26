@@ -2,7 +2,6 @@ const express = require('express')
 const app = express()
 const database = require('./config/database');
 const dotenv = require('dotenv');
-const cookieParser = require("cookie-parser");
 const cors = require('cors');
 const userRoutes = require("./routes/userRoutes")
 const eventRoutes = require("./routes/eventRoutes")
@@ -18,7 +17,6 @@ database.connect();
 
 // Middlewares
 app.use(express.json());
-app.use(cookieParser());
 app.use(
 	cors({
 		origin: ["https://portfolio-pvx3.vercel.app", "http://localhost:5173", "http://localhost:3000"],
